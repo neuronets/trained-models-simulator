@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: cd Test/test/1.0.0/docker/ && docker build -t hvgazula/test:tm-sim .
+      run: cd PialNN/pialnn/1.0.0/docker/ && docker build -t hvgazula/pialnn:tm-sim .
       
       # Push the Docker image to Docker Hub (only if the PR is merged)
     - name: Push Docker image
