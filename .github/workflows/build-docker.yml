@@ -9,10 +9,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: cd PialNN/pialnn/1.0.0/docker/ && docker build -t hvgazula/pialnn:tm-sim .
+      run: cd CortexODE/cortexode/1.0.0/docker/ && docker build -t hvgazula/cortexode:tm-sim .
       
       # Push the Docker image to Docker Hub (only if the PR is merged)
     - name: Push Docker image
       run: |
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker push hvgazula/pialnn:tm-sim
+        docker push hvgazula/cortexode:tm-sim
